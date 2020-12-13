@@ -1,4 +1,4 @@
-# Stats_170AB
+# Stats_170AB -- Capstone Project
 
 Our project is on Predicting the Difference between Goodreads Ratings and Amazon Ratings
 
