@@ -137,11 +137,14 @@ RMSE | 0.3353
 R2 Adj | -0.0013
 
 **Without text features**, we found that **Xgboost got the best test error rates, with MSE around 0.09. Followed by Random Forest and Neural Network.**
+
  ![](./images/project1_model1.jpg)
+ 
 Although the test error of NN is slightly worse than that of RF, we thought RF performed much better since the train errors were much closer to the test errors, which meant the model was not overfitting. Like the models above, we decided to add more features from LDA in order to get better results.
 
 We incorporated the 35 LDA features into the model using both Goodreads and Amazon metadata. The features significantly improved our model performance.
 The graph below illustrates the different error metrics evaluated on 3 different algorithms for this model: RF, XGB, and NN. Among the metrics, XGB consistently has a lower test error rate than the other two as well as has the highest adjusted R2 value. On the other hand, NN always has the worst test errors and R2 values regardless of metrics. Therefore, XGB is the best algorithm for the model that uses Goodreads and Amazon features to predict rating differences. 
+
  ![](./images/project1_model2.jpg)
 
 Despite being the best algorithm, XGB test error is still high.
