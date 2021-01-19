@@ -57,8 +57,8 @@ As a result, we **reduced the text cleaning process to 7hrs for all of the revie
 
 #### Final Data Description
 
-The Goodreads reviews dataset has 906,876 reviews. For each review, the data consist of user rating, user review time, book’s ASIN/ISBN, word count before cleaning, word count after cleaning, raw review text (i.e. comment), and processed review text. Note that the user ratings, user review times, book’s ASIN/ISBN, and user comments are the data in the website, while the other metadata is processed by us.
-![plot](./images/project1_gr1.jpg)
+The Goodreads reviews dataset has 906,876 reviews.
+![](./images/project1_gr1.jpg)
 
 The Goodreads book metadata dataset has 37,233 rows and 21 columns, where each row consists of the book’s ASIN/ISBN, number of ratings, number of pages, and many other data as listed by Goodreads. This dataset has both categorical (ASIN, publisher, format, description, genres) and numerical variables (the rest of the columns).  
 {{<figure src="/images/project1_gr2.jpg">}}
