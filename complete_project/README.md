@@ -9,8 +9,8 @@ This is my Capstone project. I and my teammate were curious about how differentl
 * Provided insights and conclusions about the datasets from the results of EDA and machine learning models.
 * Wrote a report communicating the results to non-technical and technical audiences.  
 
-To get the full project report, please visit [my github](https://github.com/4tiennguyen/Stats_170AB/blob/master/complete_project/Final_Project_Report%20.pdf)   
-To get the full codes, please visit [my github](https://github.com/4tiennguyen/Stats_170AB)
+To get the full project report, please visit [my github](https://github.com/4tiennguyen/Book_Rating_Prediction/blob/master/complete_project/Final_Project_Report%20.pdf)   
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Introduction
@@ -116,7 +116,12 @@ The optimal number of topics is 35, which has the highest score of  0.3667. Like
 
 We started by modeling the books metadata and selecting attributes for each of the algorithms. We found that most of the numeric features are good predictors. We had to do some data cleaning such as combining the number of ratings from Goodreads and Amazon into one feature. And likewise for the number of text reviews.  
 
-Since there are null values in the dataset, we tried four methods to deal with them for each of the models and compared the errors for each method in order to find the best way to deal with the missing values. First we omitted training on the null rows. Second, we replaced null values with the mean for each of the features. Third, we replaced null values with the median of each of the features. And lastly, we imputed the missing values. We found that for all methods, omitting the null rows gave us the best results since there weren’t too many null rows in our dataset.  
+Since there are null values in the dataset, we tried four methods to deal with them for each of the models and compared the errors for each method in order to find the best way to deal with the missing values: 
+1. We omitted training on the null rows.  
+2. We replaced null values with the mean for each of the features.  
+3. We replaced null values with the median of each of the features.    
+4. We imputed the missing values.
+ **We found that for all methods, omitting the null rows gave us the best results since there weren’t too many null rows in our dataset.**  
 
 Regarding the categorical features, we one-hot encoded them and tested them on all the models and compared their train and test performance. genres was the only good one to incorporate into our model since there were too many levels for the other features such as format and publisher. These features created too many dummy variables and noise in the data that the models ended up performing worse.  
 
@@ -124,7 +129,7 @@ After features selection, we tuned hyperparameters using grid search cross valid
 
 ### 5.  Prediction models (with LDA features)
 
-After having LDA features, we combined them with basic features and performed the three algorithms listed in section 4.2. We tested both weighted and unweighted averages of RF, NN, and XGB with cross-validation train/test split to try and improve the model performance beyond just the three individual models. We evaluated the ensembles based on MAE, MSE, RMSE, and R2 adjusted.  
+After having LDA features, we combined them with basic features and performed the three algorithms listed. We tested both weighted and unweighted averages of RF, NN, and XGB with cross-validation train/test split to try and improve the model performance beyond just the three individual models. We evaluated the ensembles based on MAE, MSE, RMSE, and R2 adjusted.  
 
 # Experiments and Evaluation 
 For **our baseline**, we decided to calculate the errors by predicting the mean for all books’ rating differences (it is known as Zero Rule Algorithm. It works by calculating the mean value for the observed output values.) We used this baseline to compare to our models’ errors in order to know if our prediction model is working correctly as intended. The baseline errors are as follows:
