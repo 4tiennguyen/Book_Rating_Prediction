@@ -1,4 +1,5 @@
 # Stats_170AB -- Capstone Project
+## Predicting the Difference between Goodreads Ratings and Amazon Ratings
 
 This is my Capstone project. I and my teammate were curious about how differently the Goodreads and Amazon users review a book, so below we  
 * Obtained and clean large Amazon and Goodreads datasets.
